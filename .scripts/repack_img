@@ -206,6 +206,13 @@ if [[ -f "$myname".img-dt ]];
 	dtb=" --dt $ldtb";
 	echo -e "Device tree blob:$y  $ldtb$c";echo " ";
 fi;
+###################### Signature ##########################
+if [[ -f "$myname".img-signature ]];
+	then
+	sign="$myname".img-signature;
+	sig=" --signature $sign";
+	echo -e "Bootimg signature:$y  $sign$c";echo " ";
+fi;
 ###########################################################
 stamp=$(date +"%Y%m%d-%H%M");
 newimage="$imgfolder"_"$stamp".img;
@@ -221,7 +228,7 @@ if [[ -f "$myname".img-mtk ]];
 		exit 1;
 	fi;
 	else
-	$mkbootimg --kernel "$kernel" --ramdisk "$ramdisk" --pagesize "$pagesize" --cmdline "$lcmd" --board "$bname" --base "$base" --kernel_offset "$keoff" --ramdisk_offset "$ramoff" --tags_offset "$tagoff"$losec$second$dtb -o ../output/"$newimage";
+	$mkbootimg --kernel "$kernel" --ramdisk "$ramdisk" --pagesize "$pagesize" --cmdline "$lcmd" --board "$bname" --base "$base" --kernel_offset "$keoff" --ramdisk_offset "$ramoff" --tags_offset "$tagoff"$losec$second$dtb $sig -o ../output/"$newimage";
 	if [ ! $? -eq "0" ]; 
 		then
 		abort;
