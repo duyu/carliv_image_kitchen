@@ -44,3 +44,7 @@ I built from source every working module, and the lz4 binary. For everything to 
 #  of binaries;                                                              #
 ##############################################################################		
 </pre>	
+
+Ref Usages:
+1. https://forum.xda-developers.com/android/software/twrp-porter-maker-mediatek-mt67xx-32-t3681861
+2. https://www.techora.net/port-twrp-for-mediatek-64-bit-mt67xx.html
