@@ -48,3 +48,9 @@ I built from source every working module, and the lz4 binary. For everything to 
 Ref Usages:
 1. https://forum.xda-developers.com/android/software/twrp-porter-maker-mediatek-mt67xx-32-t3681861
 2. https://www.techora.net/port-twrp-for-mediatek-64-bit-mt67xx.html
+
+Images ref:
+1. `recovery-resources/TWRP_3.1.1.0_original_p25.img`
+    <br>the one found for mtk p25 Android 7.1
+2. `output/recovery-TWRP_3.1.1.0_20171214-1517.img` 
+    <br>the genrated one for my device with P25&Android 7.1
